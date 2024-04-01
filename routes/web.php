@@ -1,7 +1,9 @@
 <?php
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,6 +29,10 @@ Route::post("/verify-recaptcha", function(Request $request) {
 
 Route::post("/contact-us", function(Request $request) {
 
-   $g_captcha_resp = $request->input()["g-recaptcha-response"];
+   $response = $request->input();
+
+   Mail::to('tony@urmerch.co.uk')->send(new ContactMail($response["first-name"]." ".$response["last-name"], $response["your-message"], $response["phone"], $response["your-email"], $response["company-organization"]));
+
+   return redirect()->back(); 
    
 }); 
