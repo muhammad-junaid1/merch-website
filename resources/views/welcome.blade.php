@@ -17,10 +17,11 @@
       <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 
-	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
 	<link rel="dns-prefetch" href="https://unpkg.com/">
 	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
 	<link rel="dns-prefetch" href="https://use.fontawesome.com/">
+
+       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 	<style id="safe-svg-svg-icon-style-inline-css" type="text/css">
@@ -865,8 +866,10 @@
 							<p role="status" aria-live="polite" aria-atomic="true"></p>
 							<ul></ul>
 						</div>
-						<form action="#" method="post" class="wpcf7-form init" aria-label="Contact form"
-							novalidate="novalidate" data-status="init">
+
+						<form id="contact-us-form" action="{{url('/contact-us')}}" method="POST" class="wpcf7-form init" aria-label="Contact form"
+						>
+                        @csrf
 							<div style="display: none;">
 								<input type="hidden" name="_wpcf7" value="6611">
 								<input type="hidden" name="_wpcf7_version" value="5.7.7">
@@ -882,6 +885,7 @@
 										<p><label class="so-form-label" for="first-name">First Name*</label><span
 												class="wpcf7-form-control-wrap" data-name="first-name"><input size="40"
 													class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
+                                                    required="true"
 													aria-required="true" aria-invalid="false" value="" type="text"
 													name="first-name"></span>
 										</p>
@@ -904,7 +908,7 @@
 										<p><label for="phone" class="so-form-label">Phone*</label><span
 												class="wpcf7-form-control-wrap" data-name="phone"><input size="40"
 													class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel so-form-input"
-													aria-required="true" aria-invalid="false" placeholder="" value=""
+													aria-required="true" required="true" aria-invalid="false" placeholder="" value=""
 													type="tel" name="phone"></span>
 										</p>
 									</div>
@@ -915,7 +919,7 @@
 												class="wpcf7-form-control-wrap" data-name="your-email"><input size="40"
 													class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email so-form-input"
 													aria-required="true" aria-invalid="false" placeholder="" value=""
-													type="email" name="your-email"></span>
+													type="email" required="true" name="your-email"></span>
 										</p>
 									</div>
 								</div>
@@ -928,7 +932,7 @@
 												size="40"
 												class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
 												aria-required="true" aria-invalid="false" placeholder="" value=""
-												type="text" name="company-organization"></span>
+												type="text" required="" name="company-organization"></span>
 									</p>
 								</div>
 							</div>
@@ -938,15 +942,20 @@
 											Here*</label><span class="wpcf7-form-control-wrap"
 											data-name="your-message"><textarea cols="40" rows="10"
 												class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required so-form-input so-form-input-textarea"
-												aria-required="true" aria-invalid="false" placeholder=""
+												aria-required="true" required="" aria-invalid="false" placeholder=""
 												name="your-message"></textarea></span>
 									</p>
 								</div>
 							</div>
 
 							<div class="so-form-row">
-								<p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
-										value="Inquire Now"><span class="wpcf7-spinner"></span>
+                                      <div class="g-recaptcha" style="margin-bottom: 10px" data-sitekey="6Ldv0aopAAAAAP-VjoKaJXllmc7Fur-CJaWFONYI"></div>
+
+     @if ($message = Session::get('success'))
+                <div>{$message}</div>
+            @endif
+								<p><button class="wpcf7-form-control has-spinner wpcf7-submit button"
+										>Inquire Now</button><span class="wpcf7-spinner"></span>
 								</p>
 							</div>
 							<p style="display: none !important;"><label>Δ<textarea name="_wpcf7_ak_hp_textarea"
@@ -966,299 +975,6 @@
 						<img src="assets/whatsapp.png" width="25px" />
 
 						Contact on Whatsapp </a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="pop-up-form second">
-
-			<div class="close-form">
-				<img class="image" src="assets/close.svg" alt="icon close">
-			</div>
-
-			<div class="so-form-wrapper">
-
-				<div class="headline">
-					<h4 class="dark-color">
-						Get Your <span>FREE</span> Custom Swag! </h4>
-
-					<p class="sub-title">
-						Please fill out the form below and we will be in touch<br>
-						so you can try us out with FREE Custom Swag. We want<br>
-						you to be memorable. Products that impress. brands<br>
-						that get noticed. Companies you remember. </p>
-				</div>
-
-				<div class="so-form">
-
-					<div class="wpcf7 js" id="wpcf7-f7237-o2" lang="en-US" dir="ltr">
-						<div class="screen-reader-response">
-							<p role="status" aria-live="polite" aria-atomic="true"></p>
-							<ul></ul>
-						</div>
-						<form action="#" method="post" class="wpcf7-form init" aria-label="Contact form"
-							novalidate="novalidate" data-status="init">
-							<div style="display: none;">
-								<input type="hidden" name="_wpcf7" value="7237">
-								<input type="hidden" name="_wpcf7_version" value="5.7.7">
-								<input type="hidden" name="_wpcf7_locale" value="en_US">
-								<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f7237-o2">
-								<input type="hidden" name="_wpcf7_container_post" value="0">
-								<input type="hidden" name="_wpcf7_posted_data_hash" value="">
-								<!-- <input type="hidden" name="_wpcf7_recaptcha_response" value=""> -->
-							</div>
-							<div class="so-form-row col">
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label class="so-form-label" for="first-name">Name*</label><span
-												class="wpcf7-form-control-wrap" data-name="first-name"><input size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
-													aria-required="true" aria-invalid="false" value="" type="text"
-													name="first-name"></span>
-										</p>
-									</div>
-								</div>
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label class="so-form-label" for="company-name">Company Name*</label><span
-												class="wpcf7-form-control-wrap" data-name="company-name"><input
-													size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
-													aria-required="true" aria-invalid="false" value="" type="text"
-													name="company-name"></span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="so-form-row col">
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label for="phone" class="so-form-label">Phone Number*</label><span
-												class="wpcf7-form-control-wrap" data-name="phone"><input size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel so-form-input"
-													aria-required="true" aria-invalid="false" placeholder="" value=""
-													type="tel" name="phone"></span>
-										</p>
-									</div>
-								</div>
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label for="your-email" class="so-form-label">Company Email
-												Address*</label><span class="wpcf7-form-control-wrap"
-												data-name="your-email"><input size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email so-form-input"
-													aria-required="true" aria-invalid="false" placeholder="" value=""
-													type="email" name="your-email"></span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="so-form-row">
-								<div class="so-form-input-wrapper">
-									<p><label class="so-form-label" for="address">Address*</label><span
-											class="wpcf7-form-control-wrap" data-name="address"><input size="40"
-												class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
-												aria-required="true" aria-invalid="false" value="" type="text"
-												name="address"></span>
-									</p>
-								</div>
-							</div>
-							<!-- <div class="so-form-row">
-								<span class="wpcf7-form-control-wrap recaptcha" data-name="recaptcha"><span
-										data-sitekey="6LfhhjYnAAAAAErp3oAsKKlP2oj-_OwnQbHjrOdz" data-align="center"
-										class="wpcf7-form-control g-recaptcha wpcf7-recaptcha">
-										<div style="width: 304px; height: 78px;">
-											<div><iframe title="reCAPTCHA" width="304" height="78" role="presentation"
-													name="a-ky9gtmckat2o" frameborder="0" scrolling="no"
-													sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-													src="assets/anchor(1).html"></iframe>
-											</div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response"
-												class="g-recaptcha-response"
-												style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-										</div>
-									</span>
-									<noscript>
-										<div class="grecaptcha-noscript">
-											<iframe
-												src="https://www.google.com/recaptcha/api/fallback?k=6LfhhjYnAAAAAErp3oAsKKlP2oj-_OwnQbHjrOdz"
-												frameborder="0" scrolling="no" width="310" height="430">
-											</iframe>
-											<textarea name="g-recaptcha-response" rows="3" cols="40"
-												placeholder="reCaptcha Response Here">
-		</textarea>
-										</div>
-									</noscript>
-								</span>
-							</div> -->
-							<div class="so-form-row">
-								<p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
-										value="Inquire Now"><span class="wpcf7-spinner"></span>
-								</p>
-							</div>
-							<p style="display: none !important;"><label>Δ<textarea name="_wpcf7_ak_hp_textarea"
-										cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden"
-									id="ak_js_2" name="_wpcf7_ak_js" value="1711124334759">
-								<script>document.getElementById("ak_js_2").setAttribute("value", (new Date()).getTime());</script>
-							</p>
-							<div class="wpcf7-response-output" aria-hidden="true"></div>
-						</form>
-					</div>
-				</div>
-
-				<div class="row-phone">
-
-					<a href="tel:+923005538773" class="link" target="">
-						Or Call +92 (300) 5538-773 </a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="pop-up-form third">
-
-			<div class="close-form">
-				<img class="image" src="assets/close.svg" alt="icon close">
-			</div>
-
-			<div class="so-form-wrapper">
-
-				<div class="headline">
-					<h4 class="dark-color">
-						Get Your <span>FREE</span> Sample Pack! </h4>
-
-					<p class="sub-title">
-						Please fill out the form below and we will be in touch<br>
-						so you can try us out with a FREE Sample Pack. We want<br>
-						you to be memorable. Products that impress. brands<br>
-						that get noticed. Companies you remember. </p>
-				</div>
-
-				<div class="so-form">
-
-					<div class="wpcf7 js" id="wpcf7-f11044-o3" lang="en-US" dir="ltr">
-						<div class="screen-reader-response">
-							<p role="status" aria-live="polite" aria-atomic="true"></p>
-							<ul></ul>
-						</div>
-						<form action="#" method="post" class="wpcf7-form init" aria-label="Contact form"
-							novalidate="novalidate" data-status="init">
-							<div style="display: none;">
-								<input type="hidden" name="_wpcf7" value="11044">
-								<input type="hidden" name="_wpcf7_version" value="5.7.7">
-								<input type="hidden" name="_wpcf7_locale" value="en_US">
-								<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f11044-o3">
-								<input type="hidden" name="_wpcf7_container_post" value="0">
-								<input type="hidden" name="_wpcf7_posted_data_hash" value="">
-								<input type="hidden" name="_wpcf7_recaptcha_response" value="">
-							</div>
-							<div class="so-form-row col">
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label class="so-form-label" for="first-name">Name*</label><span
-												class="wpcf7-form-control-wrap" data-name="first-name"><input size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
-													aria-required="true" aria-invalid="false" value="" type="text"
-													name="first-name"></span>
-										</p>
-									</div>
-								</div>
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label class="so-form-label" for="company-name">Company Name*</label><span
-												class="wpcf7-form-control-wrap" data-name="company-name"><input
-													size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
-													aria-required="true" aria-invalid="false" value="" type="text"
-													name="company-name"></span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="so-form-row col">
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label for="phone" class="so-form-label">Phone Number*</label><span
-												class="wpcf7-form-control-wrap" data-name="phone"><input size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel so-form-input"
-													aria-required="true" aria-invalid="false" placeholder="" value=""
-													type="tel" name="phone"></span>
-										</p>
-									</div>
-								</div>
-								<div class="so-form-col">
-									<div class="so-form-input-wrapper">
-										<p><label for="your-email" class="so-form-label">Company Email
-												Address*</label><span class="wpcf7-form-control-wrap"
-												data-name="your-email"><input size="40"
-													class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email so-form-input"
-													aria-required="true" aria-invalid="false" placeholder="" value=""
-													type="email" name="your-email"></span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="so-form-row">
-								<div class="so-form-input-wrapper">
-									<p><label class="so-form-label" for="address">Address*</label><span
-											class="wpcf7-form-control-wrap" data-name="address"><input size="40"
-												class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required so-form-input"
-												aria-required="true" aria-invalid="false" value="" type="text"
-												name="address"></span>
-									</p>
-								</div>
-							</div>
-							<!-- <div class="so-form-row">
-								<span class="wpcf7-form-control-wrap recaptcha" data-name="recaptcha"><span
-										data-sitekey="6LfhhjYnAAAAAErp3oAsKKlP2oj-_OwnQbHjrOdz" data-align="center"
-										class="wpcf7-form-control g-recaptcha wpcf7-recaptcha">
-										<div style="width: 304px; height: 78px;">
-											<div><iframe title="reCAPTCHA" width="304" height="78" role="presentation"
-													name="a-noqv6t6d6hbg" frameborder="0" scrolling="no"
-													sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-													src="assets/anchor(2).html"></iframe>
-											</div><textarea id="g-recaptcha-response-2" name="g-recaptcha-response"
-												class="g-recaptcha-response"
-												style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-										</div><iframe style="display: none;"
-											src="assets/saved_resource(3).html"></iframe>
-									</span>
-									<noscript>
-										<div class="grecaptcha-noscript">
-											<iframe
-												src="https://www.google.com/recaptcha/api/fallback?k=6LfhhjYnAAAAAErp3oAsKKlP2oj-_OwnQbHjrOdz"
-												frameborder="0" scrolling="no" width="310" height="430">
-											</iframe>
-											<textarea name="g-recaptcha-response" rows="3" cols="40"
-												placeholder="reCaptcha Response Here">
-		</textarea>
-										</div>
-									</noscript>
-								</span>
-							</div> -->
-							<div class="so-form-row">
-								<p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
-										value="Inquire Now"><span class="wpcf7-spinner"></span>
-								</p>
-							</div>
-							<p style="display: none !important;"><label>Δ<textarea name="_wpcf7_ak_hp_textarea"
-										cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden"
-									id="ak_js_3" name="_wpcf7_ak_js" value="1711124334759">
-								<script>document.getElementById("ak_js_3").setAttribute("value", (new Date()).getTime());</script>
-							</p>
-							<div class="wpcf7-response-output" aria-hidden="true"></div>
-						</form>
-					</div>
-				</div>
-
-				<div class="row-phone">
-
-					<a href="tel:+923005538773" class="link" target="">
-						Or Call +92 (300) 5538-773 </a>
 
 				</div>
 
@@ -1782,6 +1498,36 @@
 	</div>
 
 	<script type="text/javascript" id="" src="assets/19220"></script>
+
+    <script>
+          function validateForm(e) {
+        var recaptchaResponse = grecaptcha.getResponse();
+        e.preventDefault(); 
+        var form = this; 
+
+        fetch("/verify-recaptcha", {
+            method: "POST", 
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest', // To signify an AJAX request
+                'X-CSRF-TOKEN': '{{ csrf_token() }}' // CSRF token header
+            }, 
+            body: JSON.stringify({
+                captcha: recaptchaResponse
+            }),
+        }).then((response) => response.json()).then(result=> {
+            console.log(result); 
+            if(result.status) {
+            form.submit(); 
+            } else {
+                alert("Captcha verification failed"); 
+            }
+        })
+    }
+
+    document.getElementById('contact-us-form').addEventListener('submit', validateForm);
+    </script>
 </body>
 
 </html>
