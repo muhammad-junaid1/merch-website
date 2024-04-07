@@ -757,7 +757,7 @@
 										</g>
 									</svg>
 
-									+44 (204) 5547-423</a>
+									+44 204 5547423</a>
 
 
 
@@ -1439,74 +1439,74 @@
 								<div class="footer-contact-item">
 
 									<div class="content-wrapper">
+										<p style="color: white">Main Office No.
+										</p>
 										<h6>
 											<strong>
 												<a href="tel:+442045547423" class="link" target="">
-													+44 (204) 5547-423 </a>
+													+44 204 5547423 </a>
 											</strong>
 										</h6>
-										<p style="color: white">Worldwide
-										</p>
 									</div>
 
 								</div>
 							
 
 							</div>
-							<div class="footer-contact">
+							<div class="footer-contact department">
 								<div class="footer-contact-item">
 									<div class="content-wrapper">
+										<p>Sales Department
+										</p>
 										<p>
 											<strong>
 												<a style="color: #dbb527" href="tel:+443300569783" class="link" target="">
-												+44 (330) 0569783 </a>
+												+44 330 0569783 </a>
 											</strong>
-										</p>
-										<p>Sales Department
 										</p>
 									</div>
 								</div>
 							</div>
-							<div class="footer-contact">
+							<div class="footer-contact department">
 								<div class="footer-contact-item">
 									<div class="content-wrapper">
+										<p>Billing Department
+										</p>
 										<p>
 											<strong>
 												<a style="color: #dbb527" href="tel:+443300569785" class="link" target="">
-													+44 (330) 0569785 </a>
+													+44 330 0569785 </a>
 											</strong>
-										</p>
-										<p>Billing Department
 										</p>
 									</div>
 								
 														</div>
 							</div>
-							<div class="footer-contact">
+							<div class="footer-contact department">
 								<div class="footer-contact-item">
 									<div class="content-wrapper">
+										<p >Support Department
+										</p>
 										<p>
 											<strong>
 												<a style="color: #dbb527" href="tel:+443300569784" class="link" target="">
-													+44 (330) 0569784 </a>
+													+44 330 0569784 </a>
 											</strong>
-										</p>
-										<p >Support Department
 										</p>
 									</div>
 								
 														</div>
 							</div>
-							<div class="footer-contact">
+							<div class="footer-contact department">
 								<div class="footer-contact-item">
 									<div class="content-wrapper">
+										<p >Manufacturing Department
+										</p>
 										<p>
 											<strong>
 											<a style="color: #dbb527" href="tel:+923005538773" class="link" target="">
-													+92 (300) 5538773 </a>
+													+92 300 5538773 </a>
 											</strong>
-										</p>
-										<p >Manufacturing Department
 										</p>
 									</div>
 								
