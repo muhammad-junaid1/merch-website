@@ -821,7 +821,7 @@
 								</g>
 							</svg>
 
-							+92 (300) 5538-773 </a>
+							+44 2045547423 </a>
 
 
 
@@ -1015,7 +1015,7 @@
 							Craft Your Unique Brand, <br /> Ready When You Are. </p>
 
 						<h1 class="sub-title">
-							Company your merch, branded merchandise &amp;<br> online company stores for employees </h1>
+							Branded merchandise &amp;<br> online company stores for employees </h1>
 
 
 						<a href="#" class="button bg-orange-color open-pop-up-form first-form">
@@ -1345,6 +1345,7 @@
 							</ul>
 						</div>
 
+
 						<div class="footer-menu">
 
 							<h6>
@@ -1402,6 +1403,7 @@
 							</ul>
 						</div>
 
+
 						<div class="footer-menu">
 
 							<h6>
@@ -1428,6 +1430,7 @@
 										href="#">Careers</a></li>
 							</ul>
 						</div>
+						
 
 					</div>
 
